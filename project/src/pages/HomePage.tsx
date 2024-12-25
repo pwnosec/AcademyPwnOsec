@@ -14,7 +14,10 @@ export function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">Master Cybersecurity</h1>
-            <p className="text-xl mb-8">Join PwnOsec Academy's comprehensive training program and become an expert in cybersecurity.</p>
+            <p className="text-xl mb-8">
+              Join PwnOsec Academy's comprehensive training program and become
+              an expert in cybersecurity.
+            </p>
             <div className="flex justify-center gap-8 mb-12">
               <div className="flex items-center gap-2">
                 <Shield className="w-6 h-6" />
@@ -57,7 +60,7 @@ export function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <Users className="w-8 h-8 mx-auto mb-4 text-blue-600" />
-              <h3 className="text-3xl font-bold mb-2">5,000+</h3>
+              <h3 className="text-3xl font-bold mb-2">120+</h3>
               <p className="text-gray-600">Active Students</p>
             </div>
             <div>

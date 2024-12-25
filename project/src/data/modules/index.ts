@@ -7,10 +7,8 @@ export * from './fileUpload';
 export * from './ssrf';
 export * from './xxe';
 export * from './cors';
-export * from './csrf';
-export * from './jwt';
-
-// Export existing modules
+export * from './csrf/index';
+export * from './jwt';  // Make sure JWT modules are exported
 export * from './sqlInjection';
 export * from './webSecurity';
 export * from './xss';

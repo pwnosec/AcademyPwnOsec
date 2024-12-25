@@ -7,18 +7,20 @@ export const courses: Course[] = [
     duration: '10 hours',
     students: 1500,
     lessons: 24,
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000',
-    description: 'Master the art of identifying and exploiting SQL Injection vulnerabilities while learning essential defense strategies.',
+    image:
+      'https://i.ibb.co.com/0Fj0tdV/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner-1.png',
+    description:
+      'Master SQL Injection from basics to advanced techniques through our comprehensive three-level course. Learn to identify, exploit, and defend against SQL Injection vulnerabilities.',
     objectives: [
-      'Understand SQL Injection attack vectors',
-      'Learn detection and exploitation techniques',
-      'Implement secure coding practices',
-      'Master defense strategies and prevention',
+      'Level 1: Understand SQL Injection fundamentals and basic exploitation',
+      'Level 2: Master Blind SQL Injection techniques and automated tools',
+      'Level 3: Advanced Error-Based and Time-Based SQL Injection methods',
+      'Implement secure coding practices and defense strategies',
     ],
     prerequisites: [
-      'Basic understanding of SQL',
-      'Familiarity with web applications',
-      'Basic programming knowledge',
+      'Level 1: Basic understanding of SQL and web applications',
+      'Level 2: Completion of Level 1 and basic SQL Injection knowledge',
+      'Level 3: Strong grasp of Blind SQL Injection techniques',
     ],
   },
   {
@@ -27,8 +29,10 @@ export const courses: Course[] = [
     duration: '12 hours',
     students: 1200,
     lessons: 30,
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
-    description: 'Comprehensive guide to securing web applications against common vulnerabilities and threats.',
+    image:
+      'https://i.ibb.co.com/PjfNB5V/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner.png',
+    description:
+      'Comprehensive guide to securing web applications against common vulnerabilities and threats.',
     objectives: [
       'Understand web security fundamentals',
       'Identify common vulnerabilities',
@@ -47,8 +51,10 @@ export const courses: Course[] = [
     duration: '8 hours',
     students: 980,
     lessons: 20,
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
-    description: 'Learn to identify, exploit, and defend against Cross-Site Scripting (XSS) attacks.',
+    image:
+      'https://i.ibb.co.com/gFjKthm/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner.png',
+    description:
+      'Learn to identify, exploit, and defend against Cross-Site Scripting (XSS) attacks.',
     objectives: [
       'Understand XSS vulnerability types',
       'Master XSS detection techniques',
@@ -67,8 +73,10 @@ export const courses: Course[] = [
     duration: '8 hours',
     students: 850,
     lessons: 18,
-    image: 'https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&q=80&w=1000',
-    description: 'Master the identification and exploitation of authentication vulnerabilities in web applications.',
+    image:
+      'https://i.ibb.co.com/r238Z7D/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner-2.png',
+    description:
+      'Master the identification and exploitation of authentication vulnerabilities in web applications.',
     objectives: [
       'Understand authentication mechanisms',
       'Identify common authentication flaws',
@@ -87,8 +95,10 @@ export const courses: Course[] = [
     duration: '6 hours',
     students: 720,
     lessons: 15,
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000',
-    description: 'Learn to identify and exploit directory traversal vulnerabilities while implementing proper defenses.',
+    image:
+      'https://i.ibb.co.com/9q2tZty/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner-3.png',
+    description:
+      'Learn to identify and exploit directory traversal vulnerabilities while implementing proper defenses.',
     objectives: [
       'Understand path traversal attacks',
       'Identify vulnerable file access patterns',
@@ -107,8 +117,10 @@ export const courses: Course[] = [
     duration: '7 hours',
     students: 680,
     lessons: 16,
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
-    description: 'Master the art of identifying and preventing command injection vulnerabilities in applications.',
+    image:
+      'https://i.ibb.co.com/xFNzTCn/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner-4.png',
+    description:
+      'Master the art of identifying and preventing command injection vulnerabilities in applications.',
     objectives: [
       'Understand command injection vectors',
       'Identify vulnerable code patterns',
@@ -127,8 +139,10 @@ export const courses: Course[] = [
     duration: '9 hours',
     students: 790,
     lessons: 20,
-    image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1000',
-    description: 'Learn to identify and exploit access control vulnerabilities while implementing proper authorization mechanisms.',
+    image:
+      'https://i.ibb.co.com/DWPMsK7/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner-7.png',
+    description:
+      'Learn to identify and exploit access control vulnerabilities while implementing proper authorization mechanisms.',
     objectives: [
       'Understand access control models',
       'Identify authorization flaws',
@@ -147,8 +161,10 @@ export const courses: Course[] = [
     duration: '7 hours',
     students: 650,
     lessons: 16,
-    image: 'https://images.unsplash.com/photo-1618060932014-4deda4932554?auto=format&fit=crop&q=80&w=1000',
-    description: 'Master the identification and prevention of file upload vulnerabilities in web applications.',
+    image:
+      'https://i.ibb.co.com/SPrrGjH/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner-6.png',
+    description:
+      'Master the identification and prevention of file upload vulnerabilities in web applications.',
     objectives: [
       'Understand file upload risks',
       'Identify vulnerable upload handlers',
@@ -167,8 +183,10 @@ export const courses: Course[] = [
     duration: '8 hours',
     students: 580,
     lessons: 18,
-    image: 'https://images.unsplash.com/photo-1562813733-b31f71025d54?auto=format&fit=crop&q=80&w=1000',
-    description: 'Learn to identify, exploit, and prevent SSRF vulnerabilities in modern web applications.',
+    image:
+      'https://i.ibb.co.com/WyXx6Hk/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner-5.png',
+    description:
+      'Learn to identify, exploit, and prevent SSRF vulnerabilities in modern web applications.',
     objectives: [
       'Understand SSRF attack vectors',
       'Identify vulnerable endpoints',
@@ -187,8 +205,10 @@ export const courses: Course[] = [
     duration: '6 hours',
     students: 520,
     lessons: 14,
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
-    description: 'Master the identification and prevention of XML External Entity (XXE) injection vulnerabilities.',
+    image:
+      'https://i.ibb.co.com/Lz4L62f/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner-8.png',
+    description:
+      'Master the identification and prevention of XML External Entity (XXE) injection vulnerabilities.',
     objectives: [
       'Understand XML processing',
       'Identify XXE vulnerabilities',
@@ -207,8 +227,10 @@ export const courses: Course[] = [
     duration: '5 hours',
     students: 480,
     lessons: 12,
-    image: 'https://images.unsplash.com/photo-1562813733-b31f71025d54?auto=format&fit=crop&q=80&w=1000',
-    description: 'Learn to identify and exploit Cross-Origin Resource Sharing (CORS) misconfigurations.',
+    image:
+      'https://i.ibb.co.com/ch512mf/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner-1.png',
+    description:
+      'Learn to identify and exploit Cross-Origin Resource Sharing (CORS) misconfigurations.',
     objectives: [
       'Understand CORS mechanisms',
       'Identify CORS misconfigurations',
@@ -227,8 +249,10 @@ export const courses: Course[] = [
     duration: '6 hours',
     students: 620,
     lessons: 15,
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
-    description: 'Master the identification and prevention of Cross-Site Request Forgery attacks.',
+    image:
+      'https://i.ibb.co.com/6JFb95Y/Copy-of-Copy-of-Blue-MInimalist-Automotive-Youtube-Banner.png',
+    description:
+      'Master the identification and prevention of Cross-Site Request Forgery attacks.',
     objectives: [
       'Understand CSRF attack vectors',
       'Identify vulnerable endpoints',
@@ -247,8 +271,10 @@ export const courses: Course[] = [
     duration: '7 hours',
     students: 550,
     lessons: 16,
-    image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1000',
-    description: 'Learn to identify and exploit vulnerabilities in JWT implementation and handling.',
+    image:
+      'https://i.ibb.co.com/GpBpF13/Blue-MInimalist-Automotive-Youtube-Banner-1.png',
+    description:
+      'Learn to identify and exploit vulnerabilities in JWT implementation and handling.',
     objectives: [
       'Understand JWT structure',
       'Identify JWT vulnerabilities',

@@ -17,8 +17,8 @@ import {
   xxeModules,
   corsModules,
   csrfModules,
-  jwtModules
-} from '../data/courseModules';
+  jwtModules  // Make sure jwtModules is imported
+} from '../data/modules';
 import { CourseModule } from '../types/course';
 
 export function CourseDetail() {
@@ -58,7 +58,7 @@ export function CourseDetail() {
       case 'csrf':
         return csrfModules;
       case 'jwt-attacks':
-        return jwtModules;
+        return jwtModules;  // This should now work correctly
       default:
         return [];
     }

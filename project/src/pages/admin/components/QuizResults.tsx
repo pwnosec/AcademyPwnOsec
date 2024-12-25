@@ -1,7 +1,40 @@
 import React from 'react';
 import { CheckCircle, XCircle, AlertCircle } from 'lucide-react';
+import { useAuth } from '../../../context/AuthContext';
+import { useCourseProgress } from '../../../context/CourseProgressContext';
 
 export function QuizResults() {
+  const { user } = useAuth();
+  const { progress } = useCourseProgress();
+
+  // Mock quiz submissions based on course progress
+  const submissions = [
+    {
+      student: {
+        name: 'Karyawan PwnOsec',
+        email: 'karyawan@pwn0sec.com',
+        avatar: 'https://i.ibb.co.com/m81jbjc/11zon-cropped-20.png',
+      },
+      course: 'SQL Injection Mastery',
+      quiz: 'Module 1 Quiz',
+      score: 85,
+      status: 'approved',
+      timestamp: '2024-03-15T10:30:00Z',
+    },
+    {
+      student: {
+        name: 'Student User',
+        email: 'student@example.com',
+        avatar: '',
+      },
+      course: 'Web Application Security',
+      quiz: 'Module 2 Quiz',
+      score: 75,
+      status: 'pending',
+      timestamp: '2024-03-15T11:45:00Z',
+    },
+  ];
+
   return (
     <div className="bg-white rounded-lg shadow-sm">
       <div className="p-6 border-b">
@@ -20,28 +53,32 @@ export function QuizResults() {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
-            {[
-              { status: 'pending' },
-              { status: 'approved' },
-              { status: 'failed' },
-            ].map((submission, index) => (
+            {submissions.map((submission, index) => (
               <tr key={index} className="hover:bg-gray-50">
                 <td className="px-6 py-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-                      <span className="text-sm font-medium text-blue-600">
-                        {String.fromCharCode(65 + index)}
-                      </span>
+                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden">
+                      {submission.student.avatar ? (
+                        <img 
+                          src={submission.student.avatar} 
+                          alt={submission.student.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <span className="text-sm font-medium text-blue-600">
+                          {submission.student.name.charAt(0)}
+                        </span>
+                      )}
                     </div>
                     <div>
-                      <div className="font-medium">Student {index + 1}</div>
-                      <div className="text-sm text-gray-500">student{index + 1}@example.com</div>
+                      <div className="font-medium">{submission.student.name}</div>
+                      <div className="text-sm text-gray-500">{submission.student.email}</div>
                     </div>
                   </div>
                 </td>
-                <td className="px-6 py-4">SQL Injection Mastery</td>
-                <td className="px-6 py-4">Module {index + 1} Quiz</td>
-                <td className="px-6 py-4">{85 - index * 10}%</td>
+                <td className="px-6 py-4">{submission.course}</td>
+                <td className="px-6 py-4">{submission.quiz}</td>
+                <td className="px-6 py-4">{submission.score}%</td>
                 <td className="px-6 py-4">
                   <span
                     className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-sm ${

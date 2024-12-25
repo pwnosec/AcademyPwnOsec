@@ -25,7 +25,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         isLoading: false,
       });
     } else {
-      setAuthState(prev => ({ ...prev, isLoading: false }));
+      setAuthState((prev) => ({ ...prev, isLoading: false }));
     }
   }, []);
 
@@ -45,6 +45,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           location: '',
         },
       },
+      karyawan: {
+        id: '2',
+        username: 'karyawan',
+        role: 'student',
+        email: 'karyawan@pwn0sec.com',
+        profile: {
+          fullName: 'Karyawan PwnOsec',
+          bio: 'Cybersecurity Enthusiast',
+          avatar: 'https://i.ibb.co.com/m81jbjc/11zon-cropped-20.png',
+          phoneNumber: '',
+          location: 'Indonesia',
+        },
+      },
       admin: {
         id: 'admin1',
         username: 'admin',
@@ -52,15 +65,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         email: 'admin@pwonosec.com',
         profile: {
           fullName: 'Admin User',
-          avatar: 'https://images.unsplash.com/photo-1519648023493-d82b5f8d7b8a?w=200',
+          avatar:
+            'https://images.unsplash.com/photo-1519648023493-d82b5f8d7b8a?w=200',
         },
       },
     };
 
-    const user = username === 'admin' && password === 'admin123' 
-      ? users.admin 
-      : username === 'student' && password === 'password'
+    const user =
+      username === 'admin' && password === 'admin123'
+        ? users.admin
+        : username === 'student' && password === 'password'
         ? users.student
+        : username === 'karyawan' && password === 'pwn0sec'
+        ? users.karyawan
         : null;
 
     if (user) {
@@ -102,7 +119,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ ...authState, login, logout, updateProfile }}>
+    <AuthContext.Provider
+      value={{ ...authState, login, logout, updateProfile }}
+    >
       {children}
     </AuthContext.Provider>
   );

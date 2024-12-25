@@ -4,9 +4,11 @@ import { Check } from 'lucide-react';
 export function PricingCard() {
   return (
     <div className="bg-white rounded-xl shadow-lg p-8">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">All-Access Membership</h3>
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        All-Access Membership
+      </h3>
       <div className="mb-6">
-        <span className="text-4xl font-bold">$29.99</span>
+        <span className="text-4xl font-bold">$850.99</span>
         <span className="text-gray-600">/month</span>
       </div>
       <ul className="space-y-3 mb-8">

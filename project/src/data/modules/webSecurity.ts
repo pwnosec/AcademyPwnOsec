@@ -1,70 +1,79 @@
 import { CourseModule } from '../../types/course';
 
-export const webSecurityModules: CourseModule[] = [
+// Level 1: Beginner Modules
+const webSecurityLevel1Modules: CourseModule[] = [
   {
-    id: 'web-sec-intro',
-    title: 'Web Security Fundamentals',
+    id: 'web-sec-l1-intro',
+    title: 'Introduction to Web Security',
     duration: '1h',
     type: 'video',
     status: 'available',
-    description: 'Understanding the core concepts of web application security and common attack vectors.',
+    description: 'Learn the fundamentals of web application security and common threats.',
     videoUrl: 'https://example.com/videos/web-security-intro',
   },
   {
-    id: 'web-sec-lab',
-    title: 'Security Headers Lab',
-    duration: '1h 30m',
+    id: 'web-sec-level1-lab',
+    title: 'Basic Security Testing Lab',
+    duration: '2h',
     type: 'lab',
     status: 'available',
-    description: 'Learn how to implement and test security headers in web applications.',
+    description: 'Practice identifying common web vulnerabilities in a controlled environment.',
     labInstructions: `
-In this lab, you'll work with security headers:
+Web Security Basics Lab
 
 1. Environment Setup:
-   - Clone the provided web application
-   - Review current security headers
-   - Use security header scanning tools
+   - Access the vulnerable web application
+   - Set up basic testing tools
+   - Configure your testing environment
 
-2. Tasks:
-   - Implement Content Security Policy (CSP)
-   - Configure HSTS headers
-   - Set up X-Frame-Options
-   - Test header effectiveness
+2. Basic Security Tests:
+   - Test for XSS vulnerabilities
+   - Identify CSRF weaknesses
+   - Basic SQL Injection testing
+   - Input validation checks
 
-3. Validation:
-   - Use security scanners to verify headers
-   - Test against common attack scenarios
-   - Document implementation challenges
+3. Documentation:
+   - Record findings
+   - Practice writing security reports
+   - Document mitigation strategies
+
+4. Basic Defense Implementation:
+   - Input validation
+   - Output encoding
+   - Basic security headers
     `,
-  },
+  }
+];
+
+// Level 2: Intermediate Modules
+const webSecurityLevel2Modules: CourseModule[] = [
   {
-    id: 'web-sec-quiz',
-    title: 'Web Security Assessment',
-    duration: '45m',
-    type: 'quiz',
+    id: 'web-sec-l2-intro',
+    title: 'Advanced Web Security Concepts',
+    duration: '1.5h',
+    type: 'video',
     status: 'available',
-    description: 'Evaluate your understanding of web security concepts and best practices.',
-    questions: [
-      {
-        question: 'Which security header prevents clickjacking attacks?',
-        options: [
-          'X-Frame-Options',
-          'Content-Security-Policy',
-          'X-XSS-Protection',
-          'X-Content-Type-Options',
-        ],
-        correctAnswer: 0,
-      },
-      {
-        question: 'What is the purpose of CORS?',
-        options: [
-          'To control resource sharing between origins',
-          'To encrypt data in transit',
-          'To validate user input',
-          'To prevent SQL injection',
-        ],
-        correctAnswer: 0,
-      },
-    ],
-  },
+    description: 'Master advanced web security concepts and defense mechanisms.',
+    videoUrl: 'https://example.com/videos/advanced-web-security',
+  }
+];
+
+// Level 3: Expert Modules
+const webSecurityLevel3Modules: CourseModule[] = [
+  {
+    id: 'web-sec-l3-intro',
+    title: 'Expert Web Security Techniques',
+    duration: '2h',
+    type: 'video',
+    status: 'available',
+    description: 'Learn expert-level web security techniques and enterprise defense strategies.',
+    videoUrl: 'https://example.com/videos/expert-web-security',
+  }
+];
+
+// Export all modules
+export const webSecurityModules: CourseModule[] = [
+  ...webSecurityLevel1Modules,
+  ...webSecurityLevel2Modules,
+  ...webSecurityLevel3Modules,
 ];

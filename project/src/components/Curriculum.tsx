@@ -3,25 +3,140 @@ import { BookOpen, Clock } from 'lucide-react';
 
 const modules = [
   {
-    title: 'Introduction to SQL Injection',
-    duration: '1h 30m',
-    lessons: ['Understanding SQL basics', 'Common vulnerabilities', 'Attack vectors'],
+    title: 'SQL Injection Mastery',
+    duration: '10h',
+    lessons: [
+      'Understanding SQL basics and injection fundamentals',
+      'Authentication bypass techniques',
+      'UNION-based SQL injection',
+      'Blind SQL injection methods',
+      'Time-based SQL injection',
+      'Error-based SQL injection',
+      'Advanced exploitation techniques',
+      'WAF bypass strategies',
+      'Defense implementation'
+    ],
   },
   {
-    title: 'Identification Techniques',
-    duration: '2h',
-    lessons: ['Manual testing methods', 'Automated scanning tools', 'Error-based detection'],
+    title: 'Web Application Security',
+    duration: '12h',
+    lessons: [
+      'Web security fundamentals',
+      'Common vulnerability types',
+      'Security headers implementation',
+      'Input validation techniques',
+      'Session management security',
+      'Secure authentication methods',
+      'WAF configuration and management',
+      'Security monitoring setup',
+      'Incident response planning'
+    ],
   },
   {
-    title: 'Exploitation Techniques',
-    duration: '3h',
-    lessons: ['UNION-based attacks', 'Blind SQL injection', 'Time-based techniques'],
+    title: 'XSS Attack & Defense',
+    duration: '8h',
+    lessons: [
+      'XSS fundamentals and types',
+      'Reflected XSS techniques',
+      'Stored XSS exploitation',
+      'DOM-based XSS attacks',
+      'Filter bypass methods',
+      'CSP implementation',
+      'XSS prevention strategies',
+      'Framework-specific protections',
+      'Advanced defense mechanisms'
+    ],
   },
   {
-    title: 'Defense Strategies',
-    duration: '2h 30m',
-    lessons: ['Input validation', 'Prepared statements', 'WAF implementation'],
+    title: 'Authentication Vulnerabilities',
+    duration: '8h',
+    lessons: [
+      'Authentication bypass techniques',
+      'Password-based vulnerabilities',
+      'Multi-factor authentication flaws',
+      'Session management issues',
+      'OAuth 2.0 vulnerabilities',
+      'JWT token attacks',
+      'SSO implementation flaws',
+      'Password reset vulnerabilities',
+      'Defense strategies'
+    ],
   },
+  {
+    title: 'Directory Traversal',
+    duration: '6h',
+    lessons: [
+      'Path traversal fundamentals',
+      'Basic exploitation techniques',
+      'Filter bypass methods',
+      'Encoding tricks',
+      'Null byte injection',
+      'Archive file traversal',
+      'File upload traversal',
+      'Symlink attacks',
+      'Security controls'
+    ],
+  },
+  {
+    title: 'Command Injection',
+    duration: '7h',
+    lessons: [
+      'Command injection basics',
+      'OS command execution',
+      'Filter bypass techniques',
+      'Blind command injection',
+      'Time-based injection',
+      'Out-of-band techniques',
+      'Advanced filter bypass',
+      'Custom shell techniques',
+      'Defense implementation'
+    ],
+  },
+  {
+    title: 'Access Control Vulnerabilities',
+    duration: '9h',
+    lessons: [
+      'Access control fundamentals',
+      'Horizontal privilege escalation',
+      'Vertical privilege escalation',
+      'IDOR vulnerabilities',
+      'Role-based access control',
+      'Attribute-based access control',
+      'Permission inheritance',
+      'Dynamic authorization',
+      'Enterprise defense patterns'
+    ],
+  },
+  {
+    title: 'File Upload Vulnerabilities',
+    duration: '7h',
+    lessons: [
+      'File upload security basics',
+      'Content-type validation',
+      'File content analysis',
+      'Magic number checking',
+      'Upload race conditions',
+      'File upload traversal',
+      'Polyglot file uploads',
+      'Advanced filter bypass',
+      'Secure implementation'
+    ],
+  },
+  {
+    title: 'Server-Side Request Forgery',
+    duration: '8h',
+    lessons: [
+      'SSRF fundamentals',
+      'Internal service access',
+      'Cloud metadata access',
+      'Protocol smuggling',
+      'DNS rebinding attacks',
+      'Filter bypass methods',
+      'IPv6 bypass techniques',
+      'Blind SSRF exploitation',
+      'Defense strategies'
+    ],
+  }
 ];
 
 export function Curriculum() {

@@ -3,8 +3,27 @@ import { Users, BookOpen, CheckCircle, XCircle } from 'lucide-react';
 import { StudentList } from './components/StudentList';
 import { CourseProgress } from './components/CourseProgress';
 import { QuizResults } from './components/QuizResults';
+import { AdminNotification } from '../../components/notifications/AdminNotification';
+import { useAuth } from '../../context/AuthContext';
+import { useCourseProgress } from '../../context/CourseProgressContext';
+import { courses } from '../../data/courses';
 
 export function AdminDashboard() {
+  const { user } = useAuth();
+  const { progress, isAllCoursesCompleted, pendingReview } = useCourseProgress();
+
+  // Calculate total students (from auth context mock data)
+  const totalStudents = 2; // student and karyawan accounts
+
+  // Calculate active courses
+  const activeCourses = courses.length;
+
+  // Calculate completed courses (students who completed all courses)
+  const completedStudents = 1; // For demo, showing 1 completed student
+
+  // Calculate pending reviews
+  const pendingReviews = pendingReview ? 1 : 0;
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white shadow">
@@ -21,7 +40,7 @@ export function AdminDashboard() {
               <Users className="w-8 h-8 text-blue-600" />
               <div>
                 <h3 className="text-lg font-semibold">Total Students</h3>
-                <p className="text-2xl font-bold">156</p>
+                <p className="text-2xl font-bold">{totalStudents}</p>
               </div>
             </div>
           </div>
@@ -30,7 +49,7 @@ export function AdminDashboard() {
               <BookOpen className="w-8 h-8 text-green-600" />
               <div>
                 <h3 className="text-lg font-semibold">Active Courses</h3>
-                <p className="text-2xl font-bold">3</p>
+                <p className="text-2xl font-bold">{activeCourses}</p>
               </div>
             </div>
           </div>
@@ -39,7 +58,7 @@ export function AdminDashboard() {
               <CheckCircle className="w-8 h-8 text-emerald-600" />
               <div>
                 <h3 className="text-lg font-semibold">Completed</h3>
-                <p className="text-2xl font-bold">45</p>
+                <p className="text-2xl font-bold">{completedStudents}</p>
               </div>
             </div>
           </div>
@@ -48,10 +67,15 @@ export function AdminDashboard() {
               <XCircle className="w-8 h-8 text-red-600" />
               <div>
                 <h3 className="text-lg font-semibold">Pending Review</h3>
-                <p className="text-2xl font-bold">12</p>
+                <p className="text-2xl font-bold">{pendingReviews}</p>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Course Completion Notifications */}
+        <div className="mb-8">
+          <AdminNotification />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -43,7 +43,10 @@ export function ProfilePage() {
               <div className="flex justify-center mb-6">
                 <div className="relative">
                   <img
-                    src={formData.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=200'}
+                    src={
+                      formData.avatar ||
+                      'https://i.ibb.co.com/m81jbjc/11zon-cropped-20.png'
+                    }
                     alt="Profile"
                     className="w-32 h-32 rounded-full object-cover"
                   />
@@ -52,7 +55,9 @@ export function ProfilePage() {
                     <input
                       type="text"
                       value={formData.avatar}
-                      onChange={(e) => setFormData({ ...formData, avatar: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, avatar: e.target.value })
+                      }
                       className="hidden"
                     />
                   </label>
@@ -61,41 +66,57 @@ export function ProfilePage() {
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">Full Name</label>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Full Name
+                  </label>
                   <input
                     type="text"
                     value={formData.fullName}
-                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, fullName: e.target.value })
+                    }
                     className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">Bio</label>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Bio
+                  </label>
                   <textarea
                     value={formData.bio}
-                    onChange={(e) => setFormData({ ...formData, bio: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, bio: e.target.value })
+                    }
                     rows={4}
                     className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">Phone Number</label>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Phone Number
+                  </label>
                   <input
                     type="tel"
                     value={formData.phoneNumber}
-                    onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phoneNumber: e.target.value })
+                    }
                     className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">Location</label>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Location
+                  </label>
                   <input
                     type="text"
                     value={formData.location}
-                    onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, location: e.target.value })
+                    }
                     className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
                   />
                 </div>
@@ -121,7 +142,10 @@ export function ProfilePage() {
             <div className="space-y-6">
               <div className="flex justify-center mb-6">
                 <img
-                  src={user.profile?.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=200'}
+                  src={
+                    user.profile?.avatar ||
+                    'https://i.ibb.co.com/m81jbjc/11zon-cropped-20.png'
+                  }
                   alt="Profile"
                   className="w-32 h-32 rounded-full object-cover"
                 />
@@ -129,13 +153,19 @@ export function ProfilePage() {
 
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500">Full Name</h3>
-                  <p className="mt-1 text-lg">{user.profile?.fullName || user.username}</p>
+                  <h3 className="text-sm font-medium text-gray-500">
+                    Full Name
+                  </h3>
+                  <p className="mt-1 text-lg">
+                    {user.profile?.fullName || user.username}
+                  </p>
                 </div>
 
                 <div>
                   <h3 className="text-sm font-medium text-gray-500">Bio</h3>
-                  <p className="mt-1">{user.profile?.bio || 'No bio added yet.'}</p>
+                  <p className="mt-1">
+                    {user.profile?.bio || 'No bio added yet.'}
+                  </p>
                 </div>
 
                 <div>
@@ -144,13 +174,21 @@ export function ProfilePage() {
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500">Phone Number</h3>
-                  <p className="mt-1">{user.profile?.phoneNumber || 'Not provided'}</p>
+                  <h3 className="text-sm font-medium text-gray-500">
+                    Phone Number
+                  </h3>
+                  <p className="mt-1">
+                    {user.profile?.phoneNumber || 'Not provided'}
+                  </p>
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500">Location</h3>
-                  <p className="mt-1">{user.profile?.location || 'Not provided'}</p>
+                  <h3 className="text-sm font-medium text-gray-500">
+                    Location
+                  </h3>
+                  <p className="mt-1">
+                    {user.profile?.location || 'Not provided'}
+                  </p>
                 </div>
               </div>
             </div>
